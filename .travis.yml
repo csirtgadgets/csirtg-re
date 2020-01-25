@@ -6,8 +6,7 @@ python:
 - 3.7
 - 3.8
 before_install:
-  - pip install -r dev_requirements.txt
-
+- pip install -r dev_requirements.txt
 script:
 - python setup.py develop
 - python setup.py test
@@ -24,4 +23,4 @@ deploy:
     tags: true
     condition: $TRAVIS_PYTHON_VERSION = "3.8"
   password:
-    secure: MJq8KxqLT4R/QPNNZvgcqxtNOOvFLhYD0HGcrQxq4MLdUsQoa02cSREmUQb/9SmGfuAGu6Rj+4c0TyVhWNbmev8o0uS58IQ7rLfWT6Y0yyHAa1fUxU7N8fn9F1QvszkP15I4fBeo8re1L31WHNSfoKU53q+HuVIONrfnYE/ugxjSljHbv0YqqEjUPMsyG3xQJ4wrYIiaMA2aRpSHjEcHcKVyb2wV/FD2K+1J66mYvt0c1BAYqGqwiLMe3jWbeL6crDtS9qXGJZ6AIzySlDug+rj9GWw5gBmjL2iRNpk6Yb9lgPWpwP2WwMrG6FBeEQ2wY1MhEb8QhOxhXkyY5EkeTTw3eQKd2q+OW77x9dejmmfM4XggzxwLS+DAG+jZhT3fE6jec3zLp6X/Bax4kYZoXb5KIGkKU3I89a5xH8ln8FJDvDP09S0WxGMVsKuqSsdnJFAgh10NztuM8IyHDsS8hzkvJCcNYIPsM/zplW1hhtJRvc4Ghi5lH7BfzaW13nRXdWa5BMZeejUfoGfWxPZt3t2TQ25h0ObPNPKgdZPbqKK8HZukW2h2wwz8jpoyEB9dIPx3iDt4zS/+LD6JqtfYJUkK+nZ1pHgiGjTvUQpyMYPly79S+Qe0DllpFOI32vf4C4c/bD7doAEXYkgawLFEQiuQVN5KSzP3v5ZrFPPI+oE=
+    secure: XRkCnCb7ICX7FAakvndxbxlhP/KiJrit+aMTO/hhHQb3v7nBDMnff8gU+9Zq0OP6f7PNUHuqKBNvbO6RnkFCkx4rsw+Rh6o+lXNcBbRR1Y8Lsl5wXFYSiBj1hC6eB7h4Ww+zOLifg47sHrPm2EL3RQJLkLTGKKB885S88repBOKbFm7kf0TveQOe93062nxQYvQ9gp/o5wb1fP0iG3RGsC54qksWQG0xsWcPXkkhpaWdDUfBHAGzkFv21BuAORRwSCIw9TW+qSIM0ELUmAty4q0Hg4w28NojQ2IgcL11bgTMyA7Bam5qKopscJPADPzOCrvMCgReA6Gt+z3kAGJVu+DviW7UkefNrXaTxzKdA37XrTQPlTmwdAO4sWT2881JseFKC/NZeHTe0PIm3+N9amYN11PLqDvLL4San2E7Jyegq5Di7mxSKPlmqaH++bP7TpuhxkPEcYRyoc+dlkLHAqCn/Jr5eX96uGXTL5ytCZvr/W6rlQTSx+Z8vXvIFucp+ibPch+bVlEkNwOX49dB257LVLtsqxY3RxdiAYXXyr/5XowhIm9KxFy/1fmeG5Feo7+8SESvm4V266ZoafBMu2y4LW54xV6ek9/Vx/zVy+Ev/QLjOJPdV5cmr/dB/feQVbtiOfnsipd15ZXzlGMCOT8SJRNq0qzdt2AjxHYF8Ew=
