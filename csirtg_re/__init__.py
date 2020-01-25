@@ -42,6 +42,16 @@ MAP = {
 
 
 def get(i):
+    """Regex Indicators Fast
+
+Example:
+    from csirtg_re import get
+    itype = get('1.1.1.1')
+
+    :param i: indicator string
+    :return: indicator type string
+    """
+
     for k, v in MAP.items():
         if k.match(i):
             return v
