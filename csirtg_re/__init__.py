@@ -16,7 +16,7 @@ RE_IPV6 = re.compile(r'(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,
 #RE_FQDN = re.compile('^((?!-))(xn--)?[a-z0-9][a-z0-9-_\.]{0,61}[a-z0-9]{0,1}\.(xn--)?([a-z0-9\-]{1,61}|[a-z0-9-]{1,30}\.[a-z]{2,})$')
 # http://stackoverflow.com/questions/14402407/maximum-length-of-a-domain-name-without-the-http-www-com-parts
 RE_FQDN = re.compile(r'^((?!-))(xn--)?[a-z0-9][a-z0-9-_\.]{0,245}[a-z0-9]{0,1}\.(xn--)?([a-z0-9\-]{1,61}|[a-z0-9-]{1,30}\.[a-z]{2,})$')
-RE_URI_SCHEMES = re.compile(r'^(https?|ftp)$')
+RE_URI_SCHEMES = re.compile(r'^(https?|ftp)://')
 RE_EMAIL = re.compile(r'^[_a-z0-9-\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~]+(\.[_a-z0-9-\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,8})$')
 RE_ASN = re.compile(r'^(AS|as)[0-9]{1,6}$')
 
@@ -38,6 +38,7 @@ MAP = {
     RE_ASN: 'asn',
     RE_URI_SCHEMES: 'url',
     RE_EMAIL: 'email',
+    RE_IPV4_CIDR: 'ipv4',
 }
 
 

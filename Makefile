@@ -8,6 +8,10 @@ clean:
 	rm -rf dist/
 	rm -rf *.egg-info
 
+deps:
+	pip install -r dev_requirements.txt
+	python setup.py develop
+
 test:
 	@python setup.py test 
 
