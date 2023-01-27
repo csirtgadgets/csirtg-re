@@ -33,21 +33,21 @@ jobs:
         make test
         make sdist
 
-#  deploy:
-#    needs: build
-#    runs-on: ubuntu-latest
-#    if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
-#    steps:
-#      - name: Set up Python 3.8
-#        uses: actions/setup-python@v1
-#        with:
-#          python-version: 3.8
-#      - uses: actions/checkout@v2
-#        with:
-#          fetch-depth: 0
-#      - name: Publish distribution 📦 to PyPI
-#        env:
-#          TWINE_USERNAME: __token__
-#          TWINE_PASSWORD: ${{ secrets.pypi_token }}
-#        run: |
-#          pip install twine~=3.1
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
+    steps:
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Publish distribution 📦 to PyPI
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.pypi_token }}
+        run: |
+          pip install twine~=4.0.0
