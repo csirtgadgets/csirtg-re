@@ -9,6 +9,7 @@ INDICATORS = {
     "http://example.com": "url",
     "https://example.com": "url",
     "1.1.1.0/8": "ipv4",
+    "bc1qjm4zu6rcg7a00ws26qr6u08dq35r3sj70yrj2e": "btc",
 }
 
 
