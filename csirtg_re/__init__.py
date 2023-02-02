@@ -32,6 +32,8 @@ RE_IPV4_PADDING = re.compile(r"(^|\.)0+([^/.])")
 
 RE_BTC = re.compile(r'^(bc1|[13])[a-zA-HJ-NP-Z0-9]{25,39}$')
 
+RE_CVE = re.compile(r'^cve-[0-9]{4}-[0-9]{4,}$')
+
 
 MAP = {
     RE_IPV4: 'ipv4',
@@ -42,6 +44,7 @@ MAP = {
     RE_EMAIL: 'email',
     RE_IPV4_CIDR: 'ipv4',
     RE_BTC: 'btc',
+    RE_CVE: 'cve',
 }
 
 
