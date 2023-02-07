@@ -59,13 +59,13 @@ Example:
     :return: indicator type string
     """
 
-    for k, v in MAP.items():
-        if k.match(i):
-            return v
-
     for k, v in RE_HASH.items():
         if v.match(i):
             return k
+
+    for k, v in MAP.items():
+        if k.match(i):
+            return v
 
 
 def main():
