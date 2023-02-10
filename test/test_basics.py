@@ -1,4 +1,7 @@
 from csirtg_re import get
+from faker import Faker
+
+fake = Faker()
 
 
 INDICATORS = {
@@ -12,9 +15,34 @@ INDICATORS = {
     "bc1qjm4zu6rcg7a00ws26qr6u08dq35r3sj70yrj2e": "btc",
     "bc1qjm4zu6rcg7a00ws26qr6u08dq35r": "btc",
     "cve-2021-27104": "cve",
+    "WES@barely3am.com": "email"
 }
 
 
 def test_re():
     for i in INDICATORS:
         assert get(i) == INDICATORS[i]
+
+    for d in range(0, 100):
+        assert get(fake.email()) == 'email'
+
+    for d in range(0, 100):
+        assert get(fake.ipv4()) == 'ipv4'
+
+    for d in range(0, 100):
+        assert get(fake.ipv6()) == 'ipv6'
+
+    for d in range(0, 100):
+        assert get(fake.url()) == 'url'
+
+    for d in range(0, 100):
+        assert get(fake.md5()) == 'md5'
+
+    for d in range(0, 100):
+        assert get(fake.sha256()) == 'sha256'
+
+    for d in range(0, 100):
+        assert get(fake.sha1()) == 'sha1'
+
+    for d in range(0, 100):
+        assert get(fake.domain_name()) == 'fqdn'
