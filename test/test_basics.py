@@ -15,7 +15,9 @@ INDICATORS = {
     "bc1qjm4zu6rcg7a00ws26qr6u08dq35r3sj70yrj2e": "btc",
     "bc1qjm4zu6rcg7a00ws26qr6u08dq35r": "btc",
     "cve-2021-27104": "cve",
-    "WES@barely3am.com": "email"
+    "WES@barely3am.com": "email",
+    "1b2a30776df64fbd7299bd588e21573891dcecbe": "sha1",
+    "https://www.church.com/terms.htm": "url"
 }
 
 
